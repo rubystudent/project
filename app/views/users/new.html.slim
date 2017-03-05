@@ -1,0 +1,8 @@
+div class = 'auth'
+  div class = 'span'
+    -if @user.errors.any?
+      div class = 'span'
+        ul
+          -@user.errors.full_messages.each do |msg|
+             li =msg
+=render 'form'

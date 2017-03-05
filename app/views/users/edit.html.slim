@@ -1,0 +1,9 @@
+=form_for @user do |form|
+  div class = 'form'
+    ul
+      li =form.email_field :email, placeholder: 'Email'
+      li =form.text_field :first_name, placeholder: 'First name'
+      li =form.text_field :last_name, placeholder: 'Last name'
+      li = form.file_field :avatar
+      li =form.submit('Sign up')
+= link_to 'Back', :back

@@ -1,0 +1,10 @@
+=form_for :user, url: create_path, method: :post do |form|
+  =form.email_field :email, placeholder: 'Email'
+  br
+  =form.password_field :password, placeholder: 'Password'
+  br
+  =flash.now[:authenticate_error]
+  br
+  =form.submit('Sign in')
+  br
+  =link_to 'Sign up', new_user_path
